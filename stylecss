@@ -1,0 +1,73 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
+
+.note {
+    font-size: 30px;
+    color: brown;
+}
+
+H1{
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+.flex-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-box section{
+    flex:1;
+    padding: 4%;
+}
+
+.flex-box aside{
+    padding: 4%;
+    max-width: 30%;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+p{
+    text-align: justify;
+}
+
+footer {
+    background-color: #1abc9c;
+    color: #ddd;
+}
+
+#teste1 {
+    text-align: center;
+    color: green;
+}
+.menu li a { 
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #1abc9c;
+}
+.menu li a:hover {
+    color: aqua;
+}
+ul {
+    list-style-type: none;
+}
+/**h4 {
+    text-align: center;
+    color: red;
+}**/
