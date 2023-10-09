@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Tarefas</title>
+</head>
+<body>
+    
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px">Minhas Tarefas</h2>
+        <input type="text" id="myInput" placeholder="Tarefa...">
+        <button onclick="newElement()" class="myBtn">Adicionar</button>
+        <!-- <span onclick="NewElement()" Class="addBtn">Adicionar</span> -->
+    </div>
+
+    <hr>
+    <ul id="myUL">
+
+    </ul>
+
+    <script>
+    function newElement() {
+        var li = document.createElement("li"); // cria o novo elemento
+        var inputValue = document.getElementById("myInput").value;
+        var t = document.createTextNode(inputValue); // cria o Nó do texto
+
+        li.appendChild(t); // cria estrutura <li>Tarefa</li>
+
+        if (inputValue === '') { //Verifica se o usuario inseriu as tarefas
+            alert("Você deve escrever algo!")
+        } else {
+            document.getElementById("myUL").appendChild(li); //adiciona
+        }
+        document.getElementById("myInput").value = ""; // reseta o input
+
+        // Pegar o enter direto
+        var input = document.getElementById("myInput");
+
+        // Executar uma função quando o usuário pressionar uma tecla no teclado
+        input.addEventListener("Keypress", function(event) {
+            // Se o usuário pressionar a tecla "Enter" no teclado
+            if (event.ky === "Enter") {
+                //Cancele a ação padrão, se necessário
+                event.preventDefault();
+                // acione o elemento do botão com um clique
+                document.getElementById("myBtn").click();
+            }
+        });
+    }
+ </script>
+
+</body>
+</html>
